@@ -229,11 +229,18 @@ html input {
   display: flex;
   justify-content: space-between;
 }
+
+.main__products .products__card {
+  width: 25%;
+}
+
 @media (max-width: 1200px) {
   .main__products .products__list {
     flex-wrap: wrap;
   }
+  
 }
+
 @media (max-width: 1200px) {
   .main__products .products__card {
     flex-basis: 50%;
