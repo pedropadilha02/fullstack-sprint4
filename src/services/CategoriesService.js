@@ -1,7 +1,19 @@
 import { getData } from './HttpService';
 
 export async function getCategories() {
-    const data = await getData('categories.json');
     
-    return data.all;
+    try{
+    
+        const data = await getData('categories.json');
+        
+        if(typeof data === 'string'){
+            throw new Error(data)
+        }
+
+        return data.all;
+
+    } catch (err) {
+        return err.message;
+    }
+    
 }

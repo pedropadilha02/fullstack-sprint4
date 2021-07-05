@@ -1,16 +1,28 @@
-import React from 'react'
+import React from 'react';
 import { Fragment } from 'react';
 import './App.css';
-import { Header } from './Header/Header'
-import { ProductPage } from './ProductPage/ProductPage'
-import Footer from './Footer/Footer'
+import { Header } from './components/Header/Header';
+import { ProductPage } from './components/ProductPage/Products/ProductPage';
+import Footer from './components/Footer/Footer';
+import { SearchProvider } from './context/SearchContext';
+import { MessageProvider} from './context/MessageContext'
+import { MessageAlert } from './components/Header/Message'
+
 
 function App() {
+  
+  
+
   return (
     <Fragment>
-    <Header/>
-    <ProductPage/>
-    <Footer/>
+        <SearchProvider>
+          <MessageProvider>
+            <MessageAlert/>
+            <Header/>
+          </MessageProvider>
+            <ProductPage/>
+        </SearchProvider> 
+      <Footer/>
     </Fragment>
   );
 }
