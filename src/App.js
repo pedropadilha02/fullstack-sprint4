@@ -7,7 +7,8 @@ import Footer from './components/Footer/Footer';
 import { SearchProvider } from './context/SearchContext';
 import { MessageProvider} from './context/MessageContext'
 import { MessageAlert } from './components/Header/Message'
-
+import { Spinner } from './components/ProductPage/Spinner/Spinner';
+import { LoadingProvider} from './context/LoadingContext'
 
 function App() {
   
@@ -17,10 +18,13 @@ function App() {
     <Fragment>
         <SearchProvider>
           <MessageProvider>
-            <MessageAlert/>
-            <Header/>
+            <LoadingProvider>
+              <MessageAlert/>
+              <Header/>
+              <ProductPage/>
+              <Spinner/>
+            </LoadingProvider>
           </MessageProvider>
-            <ProductPage/>
         </SearchProvider> 
       <Footer/>
     </Fragment>

@@ -13,7 +13,7 @@ export async function getCategories() {
         return data.all;
 
     } catch (err) {
-        return err.message;
+        return (err.message);
     }
     
 }

@@ -1,6 +1,19 @@
 import { getData } from './HttpService';
 
 export async function getFilters() {
-    const data = await getData("products.json");
-    return data.filters;
+    
+    try{
+    
+        const data = await getData('.json'); //products.json
+        
+        if(typeof data === 'string'){
+            throw new Error(data)
+        }
+
+        return data.filters;
+
+    } catch (err) {
+        return (err.message);
+    }
+    
 }

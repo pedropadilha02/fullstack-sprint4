@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react';
 import { getFilters } from '../../../services/FiltersService'
+import { useMessage } from '../../../context/MessageContext';
 import { FilterItem }from './FilterItem'
 
-export function Filter(){
-  
+export function Filter(){  
   const [data, setData] = useState();
+  const {setMessageView} = useMessage();
 
   async function fetchData() {
     const req = await getFilters();
-    setData(req);
+      if(typeof req === 'string'){
+        setMessageView(req)
+      } else {setData(req)}
+      
   }
   
   useEffect(() => {
