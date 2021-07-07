@@ -15,17 +15,19 @@ export function Breadcrumbs(){
     fetchData();
   }, []);
 
-    return(
-      <section className="main__breadcrumbs breadcrumbs">
-          <nav>
-            <ol className="breadcrumbs__list">
-              { data && data.map((breadcrumb, idx, arr) => (
-                <BreadcrumbsItem key={breadcrumb.id} current={breadcrumb} idx={idx} arr={arr} />
-              ))
-              }
-            </ol>
-          </nav>
-      </section>
-    );
+
+  return(
+    <section className="main__breadcrumbs breadcrumbs">
+        <nav>
+          <ol className="breadcrumbs__list">
+            { data && data.map((breadcrumb, idx, arr) => (
+              <BreadcrumbsItem key={breadcrumb.id} current={breadcrumb} idx={idx} arr={arr} />
+            ))
+            }
+          </ol>
+        </nav>
+    </section>
+  );
+ 
 }
 

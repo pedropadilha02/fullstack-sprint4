@@ -4,7 +4,7 @@ export async function getCategories() {
     
     try{
     
-        const data = await getData('categories.json');
+        const data = await getData('categories.json'); //categories.json 
         
         if(typeof data === 'string'){
             throw new Error(data)
@@ -13,7 +13,7 @@ export async function getCategories() {
         return data.all;
 
     } catch (err) {
-        return (err.message);
+        return ("Erro ao carregar as categorias");
     }
     
 }

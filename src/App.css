@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
+
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
 html {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -153,7 +161,7 @@ html input {
 
 }
 
-.header__topbar nav {
+.topbar__list {
   display: grid;
   grid-template-columns: 50% 50%;
   padding-top: 8.5px;
@@ -176,6 +184,10 @@ html input {
   font-size: 0.7093rem;
 }
 
+#whatsapp {
+  color: rgb(0, 156, 109);
+}
+
 .topbar__item > a {
   vertical-align: bottom;
 }
@@ -191,19 +203,48 @@ html input {
   padding-right: 8px;
 }
 
-#whatsapp {
-  color: rgb(0, 156, 109)
+.topbar__list {
+  margin: auto;
+  width: 95%;
+  max-width: 1200px;
+}
+
+.topbar__fog {
+  display: none;
 }
 
 @media (max-width: 1200px) {
-
-  .header__topbar {
-    display: none;
-  }
   
+  .header__topbar {
+    width: 100%;
+  }
+
+  .topbar__list {
+    padding: 3% 0% 0% 3%;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .topbar__list--right {
     display: none;
   }
+
+  .topbar__list--left {
+    width: 100%; 
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .topbar__item {
+    margin-right: 30px;
+    text-align: center;
+  }
+
+  .topbar__link {
+    white-space: nowrap;
+  }
+
 }
 
 
@@ -215,6 +256,15 @@ html input {
   max-width: 1100px;
   padding: 16px;
 }
+
+@media (max-width: 1200px) {
+  .main {
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 .main__breadcrumbs {
   margin-bottom: 16px;
 }
@@ -300,6 +350,12 @@ html input {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+@media (max-width: 1200px) {
+  .main__products > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media (max-width: 1200px) {
   .main__products .products__list {
@@ -349,6 +405,7 @@ html input {
   padding-top: 40px;
   width: 100%;
 }
+
 .footer__container {
   margin: 0 auto;
   width: 90%;
@@ -527,6 +584,12 @@ html input {
 }
 .footer__bottom .copyright__stamp {
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    display: none;
+  }
 }
 
 .invisible {

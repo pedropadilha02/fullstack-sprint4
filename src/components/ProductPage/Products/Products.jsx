@@ -9,7 +9,7 @@ export function Products() {
     const [data, setData] = useState();
     const [display, setDisplay] = useState();
     const { searchText } = useSearch();
-    const {loadingView, setLoadingView} = useLoading();
+    const {setLoadingView} = useLoading();
     
     async function fetchData() {
         const req = await getProducts();
@@ -32,9 +32,9 @@ export function Products() {
         product.name.toLowerCase().includes(text.toLowerCase())
         );
         setDisplay(filtered);
+        
     }
-
-
+    
     return (
     <section className="main__products">
         <ul>

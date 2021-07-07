@@ -1,12 +1,8 @@
 import React, { useRef, useState } from 'react'
 import { useMessage } from '../../context/MessageContext';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 
 export function MessageAlert() {
     
-    const notify = () => toast.error(messageView);
     const { messageView, setMessageView } = useMessage();
     const time = useRef();
     
@@ -19,7 +15,7 @@ export function MessageAlert() {
     }
 
     return (
-        <h1 className="alert">Erro ao carregar...</h1>
+        <h1 className="alert">{messageView}</h1>
     )
     
 }

@@ -3,22 +3,23 @@ export function Topbar () {
 
     return (
         <div className="header__topbar">
-            <nav className="header__container">
+            
+            <nav className="topbar__list">
             <ul className="topbar__list--left">
                 <li className="topbar__item">
-                    <a>BAIXE O APP</a>
+                    <a className="topbar__link">BAIXE O APP</a>
                 </li>
                 <li className="topbar__item">
-                    <a>CARTER'S</a>
+                    <a className="topbar__link">CARTER'S</a>
                 </li>
                 <li className="topbar__item">
-                    <a>CASA RIACHUELO</a>
+                    <a className="topbar__link">CASA RIACHUELO</a>
                 </li>
                 <li className="topbar__item">
-                    <a>BÁSICOS</a>
+                    <a className="topbar__link">BÁSICOS</a>
                 </li>
                 <li className="topbar__item">
-                    <a>JEANS</a>
+                    <a className="topbar__link">JEANS</a>
                 </li>
             </ul>
             <ul className="topbar__list--right">
